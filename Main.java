@@ -35,14 +35,6 @@ class Main {
         System.out.println("0 - aby wyjść z programu");
         return scan.nextInt();
     }
-    public static int ReadAge() throws WrongAge {
-      scan.nextLine();
-      System.out.println("Podaj wiek: ");
-      var age = scan.nextInt();
-      if(age < 1 || age > 100)
-        throw new WrongAge();
-      return age;
-    }
     public static String ReadName() throws WrongStudentName {
         System.out.println("Podaj imie: ");
         String name = scan.nextLine();
@@ -50,6 +42,14 @@ class Main {
             throw new WrongStudentName();
 
         return name;
+    }
+    public static int ReadAge() throws WrongAge {
+      scan.nextLine();
+      System.out.println("Podaj wiek: ");
+      var age = scan.nextInt();
+      if(age < 1 || age > 100)
+        throw new WrongAge();
+      return age;
     }
 
     public static void exercise1() throws IOException, WrongStudentName, WrongAge {
